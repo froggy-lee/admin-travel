@@ -66,9 +66,13 @@ function Navbar() {
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" href="#">
+                      <button
+                        className="dropdown-item"
+                        data-bs-toggle="modal"
+                        data-bs-target="#createUser"
+                      >
                         Tạo Người Dùng Mới
-                      </Link>
+                      </button>
                     </li>
                     <li>
                       <hr className="dropdown-divider" />
@@ -145,7 +149,12 @@ function Navbar() {
               </ul>
               <div>
                 <div className="d-flex align-items-center">
-                  <button type="button" className="btn btn-secondary  me-3">
+                  <button
+                    type="button"
+                    className="btn btn-secondary me-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#createAdmin"
+                  >
                     Tạo Tài Khoản ADMIN
                   </button>
                   <FaRegCircleUser size="1.5rem" className="text-primary" />

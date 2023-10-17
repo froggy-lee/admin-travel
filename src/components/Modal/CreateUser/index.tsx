@@ -1,11 +1,11 @@
 import React from "react";
 
-function CreateAdmin() {
+function CreateUser() {
   return (
     <>
       <div
         className="modal fade"
-        id="createAdmin"
+        id="createUser"
         tabIndex={-1}
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -81,4 +81,4 @@ function CreateAdmin() {
   );
 }
 
-export default CreateAdmin;
+export default CreateUser;

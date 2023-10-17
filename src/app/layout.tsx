@@ -11,7 +11,7 @@ import StyledComponentsRegistry from "@/lib/styled-component";
 import Layout from "@/components/Layout";
 import ImportBsJS from "@/lib/bootstrap-js";
 import ReduxProvider from "@/lib/redux";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
