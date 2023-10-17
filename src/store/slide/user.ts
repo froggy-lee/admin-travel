@@ -13,8 +13,10 @@ import { createSlice } from "@reduxjs/toolkit";
 // };
 
 const initialState = {
-  userInfo: {},
-  isLogin: false,
+  userInfo: {
+    name: "Lê Hiếu",
+  },
+  isLogin: true,
 };
 
 export const userSlice = createSlice({

@@ -38,7 +38,7 @@ function LoginPage() {
   return (
     <S.LoginWrapper className="container-fluid d-flex  justify-content-center align-items-center">
       <div className="container">
-        <form className="w-50 mx-auto" onSubmit={handleSubmit}>
+        <S.Form className="w-50 mx-auto p-5 border" onSubmit={handleSubmit}>
           <h1 className="text-center fw-bold mb-5 text-primary">
             TRAVEL ADMIN
           </h1>
@@ -82,7 +82,7 @@ function LoginPage() {
           <button type="submit" className="btn btn-primary w-100">
             Đăng Nhập
           </button>
-        </form>
+        </S.Form>
       </div>
     </S.LoginWrapper>
   );

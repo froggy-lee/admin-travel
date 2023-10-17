@@ -94,6 +94,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+button {
+  border: none;
+  background: none;
+}
 
 @media (prefers-color-scheme: dark) {
   html {

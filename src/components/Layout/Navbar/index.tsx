@@ -1,11 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Link from "next/link";
-import { useSelector } from "react-redux";
-import { selectIsLogin } from "@/store/slide/user";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  selectIsLogin,
+  selectUserInfo,
+  handleIsLogin,
+} from "@/store/slide/user";
+import { GrLogout } from "react-icons/gr";
+import { FaRegCircleUser } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
 function Navbar() {
   const isLogin = useSelector(selectIsLogin);
+  const userInfo = useSelector(selectUserInfo);
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  const handleLogout = useCallback(() => {
+    router.push("/");
+    dispatch(handleIsLogin(false));
+  }, [dispatch, router]);
+
   return (
     <>
       {isLogin && (
@@ -132,7 +148,19 @@ function Navbar() {
                   <button type="button" className="btn btn-secondary  me-3">
                     Tạo Tài Khoản ADMIN
                   </button>
-                  <div className="col">User Name</div>
+                  <FaRegCircleUser size="1.5rem" className="text-primary" />
+                  <div className="fw-bold fs-4 text-primary ms-2">
+                    {userInfo?.name}
+                  </div>
+                  <button
+                    className="p-1 ms-2"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    title="Logout"
+                    onClick={handleLogout}
+                  >
+                    <GrLogout size="1.5rem" color="#6c757d" />
+                  </button>
                 </div>
               </div>
             </div>
